@@ -28,3 +28,28 @@ class Solution {
         return new String(arr);
     }
 }
+
+/*
+//StringBuilder는 문자열 수정 가능
+//특정 구간만 잘라서 reverse() 사용
+
+class Solution {
+    public String solution(String my_string, int[][] queries) {
+        StringBuilder sb = new StringBuilder(my_string);
+
+        for (int[] q : queries) {
+            int s = q[0];
+            int e = q[1];
+
+            String sub = sb.substring(s, e + 1);
+            String reversed = new StringBuilder(sub).reverse().toString();
+
+            sb.replace(s, e + 1, reversed);
+        }
+
+        return sb.toString();
+    }
+}
+
+
+*/
